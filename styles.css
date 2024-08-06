@@ -1,0 +1,154 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --clr-primary: hsl(25, 85%, 65%); 
+  --clr-primary-light: hsl(25, 85%, 75%); 
+  --clr-primary-dark: hsl(25, 85%, 55%); 
+  --clr-grey-dark: hsl(30, 15%, 20%); 
+  --clr-grey-light: hsl(30, 20%, 90%); 
+  --clr-white: #fff; 
+  --clr-black: #222; 
+  --clr-red-dark: hsl(0, 60%, 50%); 
+  --clr-red-light: hsl(0, 60%, 70%); 
+  --ff-primary: "Roboto", sans-serif; 
+  --ff-secondary: "Open Sans", sans-serif; 
+  --transition: all 0.3s linear; 
+  --radius: 4px; 
+  --max-width: 1170px; 
+  --fixed-width: 620px; 
+}
+
+/* Global Styles */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-light);
+  color: var(--clr-grey-dark);
+  line-height: 1.5;
+  font-size: 14px;
+  overflow-x: hidden; 
+}
+
+ul {
+  list-style-type: none; 
+}
+
+a {
+  text-decoration: none; 
+}
+
+/* Hero Styles */
+.hero {
+  background-image: url('14.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: var(--clr-white);
+  text-align: center;
+  padding: 48px 32px;
+}
+
+.banner h1 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 8px 16px;
+  background: var(--clr-primary-light);
+  color: var(--clr-white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--clr-primary-dark);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-container {
+  background: var(--clr-white);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 90vw;
+  max-width: 400px;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: var(--clr-black);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  color: var(--clr-red-light);
+}
+
+.workout-description {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: var(--clr-grey-dark);
+}
+
+.exercise-list {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.exercise-list li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.start-btn {
+  width: 100%;
+}
